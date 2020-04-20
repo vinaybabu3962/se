@@ -1,11 +1,13 @@
 package hello;
 import java.awt.*;
+import java.awt.GridLayour
 import javax.swing.*
 public class SimpleEmail extends JFrame{
   private JTextField txtVeh,txtNum;
 	 private JTextField txtName;
 	 private JLabel lblVeh,lblNum;
 	 private JLabel lblName;
+	 private JButton btn;
 	 SimpleEmail(){
 		 txtVeh=new JTextField(15);
 		 txtNum=new JTextField(15);
@@ -14,9 +16,10 @@ public class SimpleEmail extends JFrame{
 		 lblNum=new JLabel("Number");
 		 lblName=new JLabel("Name:");
 		 add(lblVeh);add(txtVeh);add(lblNum);add(txtNum);add(lblName);add(txtName);
-		 setLayout(new FlowLayout());
-		 setSize(1000,500);
+		 setLayout(new GridLayout());
+		 setSize(500,200);
 		 setVisible(true);
+		 pack();
 		 setTitle("ANTI THEFT SYSYTEM FOR INTRA CITY TRAVELS");
 	}
 	 public static void main(String [] args) {
