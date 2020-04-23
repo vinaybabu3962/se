@@ -1,4 +1,5 @@
 package hello;
+import java.util.*;
 import java.awt.*;
 import java.awt.GridLayour
 import javax.swing.*
@@ -8,6 +9,7 @@ public class SimpleEmail extends JFrame{
 	 private JLabel lblVeh,lblNum;
 	 private JLabel lblName;
 	 private JButton btn;
+	 String veh,phno,name;
 	 SimpleEmail(){
 		 txtVeh=new JTextField(15);
 		 txtNum=new JTextField(15);
@@ -27,6 +29,22 @@ public class SimpleEmail extends JFrame{
 				 new Frame1();
 			 }
 		 });
+		 txtVeh.addActionListener(new ActionListener() {
+			 public void actionPerformed(ActionEvent e) {
+				 veh=SimpleEmail.this.txtVeh.getText();
+			 }
+		 });
+		 txtNum.addActionListener(new ActionListener() {
+			 public void actionPerformed(ActionEvent e) {
+				 phno=SimpleEmail.this.txtNum.getText();
+			 }
+		 });
+		 txtName.addActionListener(new ActionListener() {
+			 public void actionPerformed(ActionEvent e) {
+				 name=SimpleEmail.this.txtName.getText();
+			 }
+		 });
+	
 	}
 	 public static void main(String [] args) {
 		 new SimpleEmail();
